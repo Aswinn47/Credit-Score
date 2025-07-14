@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Credit Score Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h2>Enter Your Financial Details</h2>
+    <form method="POST">
+        <input type="number" name="on_time_payments" placeholder="On-Time Payments" required><br>
+        <input type="number" name="missed_payments" placeholder="Missed Payments" required><br>
+        <input type="number" name="credit_limit" placeholder="Credit Limit (₹)" required><br>
+        <input type="number" name="current_balance" placeholder="Current Credit Balance (₹)" required><br>
+        <input type="number" name="credit_age" placeholder="Credit Account Age (Years)" required><br>
+        <input type="number" name="loan_types" placeholder="Number of Loan Types" required><br>
+        <input type="number" name="recent_inquiries" placeholder="Credit Inquiries (last 6 months)" required><br>
+        <button type="submit">Check Credit Score</button>
+
+</form>
+
+    </form>
+
+    {% if score %}
+        <div class="score-card">
+            <h3>Your Credit Score: <span class="score">{{ score }}</span></h3>
+            <p>(Range: 300–850)</p>
+        </div>
+    {% endif %}
+</div>
+	<a href="http://127.0.0.1:5000/login">
+    <button class="logout-btn">Logout</button>
+</a>
+
+</body>
+</html>
