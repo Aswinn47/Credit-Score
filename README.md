@@ -5,3 +5,4 @@ This is a simple and user-friendly Credit Score Checker web application built wi
 ✅ Enter personal financial details  
 ✅ Instantly calculate a realistic credit score (300–850)  
 ✅ Log out safely  
+
