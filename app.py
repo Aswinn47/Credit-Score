@@ -90,5 +90,7 @@ def dashboard():
     return render_template('dashboard.html')
 
 if __name__ == '__main__':
-    init_db()
-    app.run(debug=True)
+    import os
+    port = int(os.environ.get("PORT", 5000))
+    init_db()  # your DB setup function
+    app.run(host='0.0.0.0', port=10000)
